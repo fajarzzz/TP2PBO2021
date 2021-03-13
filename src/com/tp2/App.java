@@ -5,7 +5,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
-import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 
 public class App {
@@ -35,19 +34,25 @@ public class App {
     private JPanel imagePan;
     private JLabel showImage;
     private JLabel nimLb;
+    private JScrollPane scrollPane1;
 
     int row, col;
-    DefaultTableModel dtm;
     String[] header = new String[]{"No", "Merk", "Plat", "Warna", "Jenis"};
+    DefaultTableModel dtm;
     Connection connect;
 
     public App() {
+        dtm = new DefaultTableModel(header,0);
+        dataTabel.setModel(dtm);
         createUIComponents();
         connectDB();
+
+        // update tabel
+        updateTabel();
+
         this.namaLb.setText("Nama : Fajar Zuliansyah Trihutama");
         this.nimLb.setText("NIM   : 1905394");
-        dtm = new DefaultTableModel(header, 0);
-        dataTabel.setModel(dtm);
+
         formButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -108,6 +113,7 @@ public class App {
                     merkTb.setText("");
                     platTb.setText("");
                     warnaTb.setText("");
+                    updateTabel();
                 }
             }
         });
@@ -130,6 +136,27 @@ public class App {
         frame.pack();
         frame.setVisible(true);
     }
+
+    public void updateTabel(){
+        try {
+            Statement query = connect.createStatement();
+            ResultSet result = query.executeQuery("SELECT * FROM mobil;");
+            dtm.setRowCount(0);
+            while (result.next()){
+                Object[] objs= {
+                        result.getInt("id"),
+                        result.getString("merk"),
+                        result.getString("plat"),
+                        result.getString("warna"),
+                        result.getString("jenis")
+
+                };
+                dtm.addRow(objs);
+            }
+        } catch(SQLException sqlException) {
+            sqlException.printStackTrace();
+        }
+    }
     private void createUIComponents() {
         // TODO: place custom component creation code here
         showImage = new JLabel(new ImageIcon("image\\PAS FOTO BEBAS.jpg"));
@@ -137,20 +164,13 @@ public class App {
 
         dataTabel.setBackground(new Color(225,225,225));
         dataTabel.setBorder(new javax.swing.border.MatteBorder(null));
-        dataTabel.setModel(new DefaultTableModel(
-                new Object [][] {
-                        {null, null, null, null},
-                        {null, null, null, null},
-                        {null, null, null, null},
-                        {null, null, null, null}
-                },
-                new String [] {
-                        "Title 1", "Title 2", "Title 3", "Title 4", "Title 5"
-                }
-        ));
 
         jenisBox = new JComboBox<>();
         jenisBox.setModel(new DefaultComboBoxModel<>(new String[] { "Biasa", "Balap", "Sport", "Truk" }));
+
+        dataTabel.setBackground(new java.awt.Color(225, 225, 225));
+        dataTabel.setBorder(new javax.swing.border.MatteBorder(null));
+
 
 
     }
