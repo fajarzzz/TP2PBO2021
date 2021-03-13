@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.tp2.App">
+  <grid id="27dc6" binding="Main" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="287" height="400"/>
+    </constraints>
+    <properties>
+      <minimumSize width="287" height="194"/>
+      <preferredSize width="287" height="425"/>
+      <requestFocusEnabled value="true"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="529f7" binding="HeaderPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="7" left="7" bottom="7" right="7"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="true"/>
+        </constraints>
+        <properties>
+          <background color="-11700056"/>
+          <foreground color="-10053189"/>
+          <visible value="true"/>
+        </properties>
+        <border type="none" title-position="6">
+          <font/>
+          <title-color color="-10053189"/>
+          <color color="-10053189"/>
+        </border>
+        <children>
+          <component id="cf27f" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="1" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Segoe UI" size="36" style="1"/>
+              <foreground color="-1"/>
+              <text value="Data Mobil"/>
+              <verifyInputWhenFocusTarget value="false"/>
+              <visible value="true"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="23d8f" binding="ButtonPanel" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="8" left="8" bottom="8" right="8"/>
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="2" fill="1" indent="0" use-parent-layout="true"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <doubleBuffered value="false"/>
+          <visible value="true"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="768a0" class="javax.swing.JButton" binding="formButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Form"/>
+            </properties>
+          </component>
+          <component id="3ebf1" class="javax.swing.JButton" binding="tentangButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Tentang"/>
+            </properties>
+          </component>
+          <component id="a36bc" class="javax.swing.JButton" binding="lihatDataButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Lihat Data"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="71128" binding="DynamicContainer" layout-manager="CardLayout" hgap="0" vgap="0" show="4210c">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <alignmentX value="0.1"/>
+          <alignmentY value="0.1"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="4210c" binding="WelcomePanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <card name="Card1"/>
+            </constraints>
+            <properties>
+              <background color="-3684009"/>
+              <visible value="false"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="c1b45" class="javax.swing.JLabel" binding="WelcomeLb">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <focusable value="true"/>
+                  <font size="18" style="3"/>
+                  <foreground color="-1"/>
+                  <horizontalAlignment value="10"/>
+                  <requestFocusEnabled value="true"/>
+                  <text value="Welcome !"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="bb57e" binding="FormPanel" layout-manager="GridLayoutManager" row-count="5" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="30" left="35" bottom="30" right="35"/>
+            <constraints>
+              <card name="Card2"/>
+            </constraints>
+            <properties>
+              <alignmentX value="0.5"/>
+              <autoscrolls value="false"/>
+              <background color="-1"/>
+              <doubleBuffered value="true"/>
+              <minimumSize width="-1" height="-1"/>
+              <preferredSize width="91" height="29"/>
+              <visible value="false"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="17495" class="javax.swing.JLabel" binding="merkLb">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="39" height="44"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <enabled value="true"/>
+                  <focusable value="true"/>
+                  <font size="16" style="1"/>
+                  <foreground color="-12961477"/>
+                  <text value="Merk"/>
+                </properties>
+              </component>
+              <component id="e3a80" class="javax.swing.JTextField" binding="warnaTb">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="160" height="-1"/>
+                    <preferred-size width="160" height="25"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <horizontalAlignment value="2"/>
+                  <inheritsPopupMenu value="false"/>
+                  <verifyInputWhenFocusTarget value="true"/>
+                  <visible value="true"/>
+                </properties>
+              </component>
+              <component id="a088f" class="javax.swing.JLabel" binding="warnaLb">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="true"/>
+                  <focusable value="true"/>
+                  <font size="16" style="1"/>
+                  <foreground color="-12961477"/>
+                  <text value="Warna"/>
+                </properties>
+              </component>
+              <component id="5e931" class="javax.swing.JComboBox" binding="jenisBox">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <maximum-size width="160" height="30"/>
+                  </grid>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="efa09" class="javax.swing.JLabel" binding="jenisLb">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="true"/>
+                  <focusable value="true"/>
+                  <font size="16" style="1"/>
+                  <foreground color="-12961477"/>
+                  <text value="Jenis"/>
+                </properties>
+              </component>
+              <component id="dea75" class="javax.swing.JTextField" binding="merkTb">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="-1" height="25"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <horizontalAlignment value="2"/>
+                  <inheritsPopupMenu value="false"/>
+                  <verifyInputWhenFocusTarget value="true"/>
+                  <visible value="true"/>
+                </properties>
+              </component>
+              <component id="2015c" class="javax.swing.JTextField" binding="platTb">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="-1" height="25"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <horizontalAlignment value="2"/>
+                  <inheritsPopupMenu value="false"/>
+                  <verifyInputWhenFocusTarget value="true"/>
+                  <visible value="true"/>
+                </properties>
+              </component>
+              <component id="c7afe" class="javax.swing.JLabel" binding="platLb">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="true"/>
+                  <focusable value="true"/>
+                  <font size="16" style="1"/>
+                  <foreground color="-12961477"/>
+                  <text value="Plat"/>
+                </properties>
+              </component>
+              <component id="e1186" class="javax.swing.JButton" binding="submitButton">
+                <constraints>
+                  <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <label value="Submit"/>
+                  <text value="Submit"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="da72b" binding="DisplayData" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <card name="Card3"/>
+            </constraints>
+            <properties>
+              <background color="-8664671"/>
+              <doubleBuffered value="true"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="48c1c" class="javax.swing.JTable" binding="dataTabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <doubleBuffered value="true"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="5795a" binding="InfoPanel" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <card name="Card4"/>
+            </constraints>
+            <properties>
+              <background color="-921103"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="f0e50" class="javax.swing.JLabel" binding="namaLb">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="3" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font size="16" style="1"/>
+                  <foreground color="-12961477"/>
+                  <text value="Nama : "/>
+                </properties>
+              </component>
+              <component id="1736d" class="javax.swing.JLabel" binding="nimLb">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="3" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <focusTraversalPolicyProvider value="false"/>
+                  <font size="16" style="1"/>
+                  <foreground color="-12961477"/>
+                  <text value="NIM    : "/>
+                </properties>
+              </component>
+              <grid id="93b5f" binding="imagePan" layout-manager="CardLayout" hgap="0" vgap="0">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-921103"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="6cdbb" class="javax.swing.JLabel" binding="showImage" custom-create="true">
+                    <constraints>
+                      <card name="Card1"/>
+                    </constraints>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </grid>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
